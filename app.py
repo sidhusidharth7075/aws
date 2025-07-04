@@ -27,8 +27,8 @@ SMTP_PORT = int(os.getenv("SMTP_PORT", 465))
 
 # ---------- SNS Configuration ----------
 ENABLE_SNS = os.getenv("ENABLE_SNS", "false").lower() == "true"
-SNS_TOPIC_ARN = os.getenv("SNS_TOPIC_ARN")
-sns = boto3.client("sns", region_name=os.getenv("AWS_REGION_NAME", "ap-south-1"))
+SNS_TOPIC_ARN = os.getenv("arn:aws:sns:us-east-1:122610488902:MedTrack:87dd91d4-0ee0-4342-a860-79091b9d41c5")
+sns = boto3.client("sns", region_name=os.getenv("AWS_REGION_NAME", "us-east-1"))
 
 
 app = Flask(__name__)
@@ -41,7 +41,7 @@ def inject_now():
 
 
 # Load configuration from environment
-AWS_REGION_NAME = os.environ.get('AWS_REGION_NAME', 'ap-south-1')
+AWS_REGION_NAME = os.environ.get('AWS_REGION_NAME', 'us-east-1')
 USERS_TABLE_NAME = os.environ.get('USERS_TABLE_NAME', 'UsersTable')
 APPOINTMENTS_TABLE_NAME = os.environ.get('APPOINTMENTS_TABLE_NAME', 'AppointmentsTable')
 NOTIFICATIONS_TABLE_NAME = os.environ.get('NOTIFICATIONS_TABLE_NAME', 'NotificationsTable')
