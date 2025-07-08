@@ -33,8 +33,8 @@ python 3.10.11 # minimum
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/AWS-Project.git
-cd AWS-Project
+git clone https://github.com/your-username/aws.git
+cd aws
 ```
 
 ### 2. Create and Activate a Virtual Environment
